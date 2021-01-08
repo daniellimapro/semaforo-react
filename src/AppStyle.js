@@ -29,7 +29,8 @@ export const Circle = styled.div`
   border-radius: 50%;
   cursor: pointer;
   background: ${props => props.color };
-  opacity: ${props => props.active ? '1' : '0.3' };
+  opacity: ${props => props.active ? '1' : '0.2' };
+  box-shadow: ${props => props.active ? `0px 0px 8px 8px ${props.color}` : 'none' };
   &:hover {
     opacity: 1;
   }

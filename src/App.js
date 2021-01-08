@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { 
   Container,
@@ -7,9 +7,10 @@ import {
 } from './AppStyle';
 
 function App() {
-  const [semaforo, setSemaforo] = useState('pare');
+  const [semaforo, setSemaforo] = useState(localStorage.getItem('semaforo') || 'siga');
 
   const handleClick = (handle) => {
+    localStorage.setItem('semaforo', handle);
     setSemaforo(handle);
   }
 
